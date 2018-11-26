@@ -37,25 +37,15 @@ public class MyRomanNumeral {
         for ( int i = 1 ; i < romanNumber.length() ; i++ ) {
             currentNumber =  romanToNumber.get(romanNumber.charAt(i)) ;
             if (currentNumber > prevNumber ) {
-                acc += currentNumber - prevNumber ;
-                prevNumber = 0 ;
+                acc -= prevNumber ;
             } else {
                 acc += prevNumber ;
-                prevNumber = currentNumber ;
             }
+            prevNumber = currentNumber ;
         }
 
         acc += prevNumber ;
 
         return acc ;
-    }
-
-    public static void main( String[] args ) {
-        System.out.println( convert( "IX")) ;
-        System.out.println( convert( "XI")) ;
-        System.out.println( convert( "XIII")) ;
-        System.out.println( convert( "CMV")) ;
-        System.out.println( convert( "M")) ;
-        System.out.println( convert( "")) ;
     }
 }

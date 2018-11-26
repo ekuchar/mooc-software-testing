@@ -45,6 +45,10 @@ class MyRomanNumeralTest {
         assertEquals( 59, roman.convert("LIX"));
         assertEquals( 695, roman.convert("DCVC"));
         assertEquals( 1899, roman.convert("MDCCCIC"));
+    }
+
+    @Test
+    void convertSeveralWithSubtractiveNotationComplex() {
         assertEquals( 44, roman.convert("XLIV"));
     }
 }
